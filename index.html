@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="password_generator.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Password Generator</h2>
+        <input type="text" id="password" readonly>
+        <label for="length">Password Length:<span id="lengthValue">12</span></label>
+        <input type="range" id="length" min="4" max="25" value="12" oninput="updateLengthValue()">
+
+        <div class="options">
+            <label><input type="checkbox" id="uppercase" checked> Have Uppercase Letters (A-Z)</label>
+            <label><input type="checkbox" id="lowercase" checked> Have Lowercase Letters (a-z)</label>
+            <label><input type="checkbox" id="numbers" checked> Have Numbers (0-9)</label>
+            <label><input type="checkbox" id="symbols" checked> Have Symbols (~!@#$%^&*)</label>
+        </div>
+
+        
+
+        <button onclick="generatePassword()">Generate Password</button>
+        <br>
+        <button onclick="copyPassword()">Copy</button>
+    </div>
+
+    
+    <footer>
+        <p>&copy; 2025 Pradeep Asetti. All rights reserved.</p>
+    </footer>
+
+    <script src="password_generator.js"></script>
+</body>
+</html>
